@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/albums', album);
 
-let port = 3000;
+var port = Number(process.env.PORT || 3000);
 
 app.listen(port, () => {
     console.log('Server is up and running on port number ' + port);
