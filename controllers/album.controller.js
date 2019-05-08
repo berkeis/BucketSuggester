@@ -1,5 +1,10 @@
 var Album = require('../models/album.model');
 
+
+exports.landing = function (req, res) {
+    res.send('It is alive!');
+};
+
 exports.album_create = function (req, res) {
 
 	var album = new Album(

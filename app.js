@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 mongoose
   .connect(
-	"mongodb://berke:mongomon1@ds153556.mlab.com:53556/heroku_xcsgnwv2"
+    "mongodb+srv://berke:berke@articles-pbtu0.mongodb.net/led?retryWrites=true"
   )
   .then(() => {
     console.log("Connected to database!");
