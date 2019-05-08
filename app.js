@@ -5,9 +5,11 @@ const album = require('./routes/album.route'); // Imports routes for the albums
 const app = express();
 
 const mongoose = require('mongoose');
+
+var url = process.env.MONGODB_URI || "mongodb+srv://berke:berke@articles-pbtu0.mongodb.net/led?retryWrites=true"
 mongoose
   .connect(
-    "mongodb+srv://berke:berke@articles-pbtu0.mongodb.net/led?retryWrites=true"
+	url
   )
   .then(() => {
     console.log("Connected to database!");
