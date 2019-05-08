@@ -6,10 +6,9 @@ const app = express();
 
 const mongoose = require('mongoose');
 
-var url = process.env.MONGODB_URI || "mongodb+srv://berke:berke@articles-pbtu0.mongodb.net/led?retryWrites=true"
 mongoose
   .connect(
-	url
+	"mongodb://berke:mongomon1@ds153556.mlab.com:53556/heroku_xcsgnwv2"
   )
   .then(() => {
     console.log("Connected to database!");
