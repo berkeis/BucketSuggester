@@ -7,7 +7,7 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose
   .connect(
-	process.env.MONGODB_URI
+    "mongodb+srv://berke:berke@articles-pbtu0.mongodb.net/led?retryWrites=true"
   )
   .then(() => {
     console.log("Connected to database!");
