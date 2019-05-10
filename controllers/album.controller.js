@@ -17,8 +17,7 @@ exports.album_create = function (req, res) {
 
     album.save(function (err) {
         if (err) {
-            // @ts-ignore
-            return res.send(err);
+            res.send(err);
         }
         res.send('Album Created successfully')
     })
@@ -50,7 +49,7 @@ exports.album_update = function (req, res) {
     });
 };
 
-const album_delete1 = (req, res) => {
+exports.album_delete = function (req, res) {
     Album.findByIdAndRemove(req.params.id, function (err) {
         // @ts-ignore
         if (err) return next(err);
@@ -58,6 +57,3 @@ const album_delete1 = (req, res) => {
     })
 };
 
-module.exports = {
-    album_delete: album_delete1
-}
