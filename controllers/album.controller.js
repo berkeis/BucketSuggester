@@ -10,7 +10,7 @@ exports.album_create = function (req, res) {
 
     var album = new Album(
         {
-            name: req.body.name2,
+            name: req.body.name,
             length: req.body.length
         }
     );
