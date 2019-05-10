@@ -20,12 +20,17 @@ mongoose
 
 mongoose.set('useFindAndModify', false);
 
+app.get('', (req, res) => {
+  res.send('Welcome to Bucketheadland')
+})
+
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/albums', album);
+
 
 var port = Number(process.env.PORT || 3000);
 
 app.listen(port, () => {
-    console.log('Server is up and running on port number ' + port);
+  console.log('Server is up and running on port number ' + port);
 });
